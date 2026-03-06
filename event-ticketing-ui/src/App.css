@@ -1,0 +1,45 @@
+.App { padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: auto; text-align: center; }
+
+.booking-panel { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+input { padding: 10px; width: 60%; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; }
+.price-display { font-size: 1.2rem; margin-bottom: 15px; }
+.buy-btn { background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+.buy-btn:disabled { background: #c2c2c2; }
+.reset-btn { background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 4px; margin-left: 10px; cursor: pointer; }
+
+.legend { margin: 20px 0; font-size: 0.9rem; }
+.dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin: 0 5px 0 15px; }
+.available { background-color: #fff; border: 1px solid #999; }
+.selected { background-color: #007bff; }
+.booked { background-color: #dc3545; }
+
+/* App.css */
+
+.grid-container {
+  display: grid;
+  /* Mandatory: 10 columns for a 10x10 look */
+  grid-template-columns: repeat(10, 1fr); 
+  gap: 8px;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.seat {
+  aspect-ratio: 1 / 1; /* Ensures seats are perfect squares */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: white; /* Default color */
+}
+
+/* Matching your class logic in App.js */
+.seat.AVAILABLE { background-color: #ffffff; }
+.seat.BOOKED { background-color: #ffcccc; color: #cc0000; cursor: not-allowed; }
+.seat.SELECTED { background-color: #007bff; color: white; border-color: #0056b3; }
